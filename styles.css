@@ -1,0 +1,223 @@
+body {
+  margin: 2em;
+  background-color: #3f3f3f;
+}
+
+#container{
+  width: 95%;
+  height: 80%;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 2.5%;
+}
+
+#actionspace{
+  width: 32.5%;
+  background-color: #efefef;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  text-align: center;
+  vertical-align: top;
+  padding: 20px;
+  float: left;
+  height: 100%;
+}
+
+#workspace{
+  width: 58%;
+  margin-right: 5.5%;
+  height: 100%;
+  float: left;
+}
+
+#titlebar{
+  font-family: helvetica neue;
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 30px;
+}
+
+.action_icon{
+  float: left;
+  height: 50%;
+  width: 50%;
+}
+
+#action_title{
+  font-family: helvetica neue;
+  font-size: 1.8em;
+  color: #388E3C;
+}
+
+#actions{
+  margin-top: 30px;
+  width: 100%;
+  height:80%;
+}
+
+.action_name{
+    font-family: helvetica neue;
+    color: #898989;
+}
+
+.action_row{
+  height: 50%;
+  text-align: center;
+}
+
+.action_cell{
+  width: 50%;
+}
+
+.action_icons{
+  height: 90px;
+  width: 90px;
+}
+
+#Icon{
+  height: 40px;
+  width: 40px;
+}
+
+#title{
+  padding-left: 20px;
+}
+
+#imagespace{
+  width: 95%;
+  height:100%;
+}
+
+#image_row{
+  height: 75%;
+  text-align: center;
+  position: relative;
+}
+
+#slideshow_row{
+  height: 30%;
+  width: 100%;
+  visibility: hidden;
+  position: relative;
+}
+
+#work_table{
+  width: 100%;
+  height: 100%;
+  border: 5px dashed #e0e0e0;
+}
+
+#actions_made{
+  height: 80%;
+}
+
+#image{
+  width: 70%;
+  text-align: center;
+}
+
+#misc_opt{
+  height: 20%;
+}
+
+.upload_btn{
+  padding: 5px;
+  background-color: #1976D2;
+  text-align: center;
+  border: none;
+  font-family: helvetica neue;
+  font-size: 1.2em;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 42.5%;
+  height:60px;
+  width: 250px;
+  left: 28%;
+}
+
+.upload_btn:focus{
+  outline:0;
+}
+
+.upload_btn:active{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+
+.upload_new_btn{
+  padding: 4px;
+  background-color: #1976D2;
+  text-align: left;
+  border: none;
+  font-family: helvetica neue;
+  font-size: 1em;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height:48%;
+  width: 100%;
+}
+
+.upload_new_btn:focus{
+  outline:0;
+}
+
+.upload_new_btn:active{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+
+.revert_btn{
+  padding: 2px;
+  background-color: #388E3C;
+  text-align: left;
+  border: none;
+  font-family: helvetica neue;
+  font-size: 1em;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  height:48%;
+  width: 100%;
+}
+
+.revert_btn:focus{
+  outline:0;
+}
+
+.revert_btn:active{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+
+.actions{
+  width: 80%;
+  background-color: #388E3C;
+  margin-left: 10%;
+  height: 35px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 18px;
+}
+
+.action_made_name{
+    color: #ffffff;
+    font-size: .8em;
+    top: 7px;
+    position: absolute;
+    left: 16px;
+}
+
+#active_img{
+  box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+ /*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */

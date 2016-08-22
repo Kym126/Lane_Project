@@ -1,0 +1,66 @@
+<div id="titlebar">
+  <img src="../Images/Icons/icon.png" id="Icon"><span id="title">Image Editor</span><div style="text-align: right; color: #ffffff; font-size: 10pt; float: right; line-height: 7px;">Author: Kym Derrick Uy<p>kymupd126@gmail.com</p><p>Lane Project 1</p></div>
+</div>
+<div id="container">
+  <div id="workspace">
+    <div id="image_row"><input type="file" accept="image/*" #file (change)="changeListener($event)" style="display: none;">
+      <button [style.visibility]="get_visibility()" class="upload_btn" (click)="file.click()">
+        <img src="../Images/Icons/photo.png" style="height: 50px; width: 50px;">
+        <span style="padding-left: 10px; position: relative; top:-15px;padding-right: 15px;">Choose an Image</span>
+      </button>
+      <table id="work_table">
+        <tr>
+          <td style="width: 30%;">
+            <table style="height: 100%; width: 100%;" [style.visibility]="get_visibility_rev()">
+              <tr>
+                <td id = "actions_made" style="position: relative; left: 1px;">
+                  <div style=" width: 100%; color: #388E3C; font-family: helvetica neue; font-size: 1.35em; margin-top: 10px; position: absolute; top: 8px; text-align: center">Actions Made
+                    <ul style="list-style-type: none; padding-left: 0px">
+                      <li *ngFor="let event of actions" class="actions"><span class="action_made_name">{{event}}</span><img (click)="actionclick(event)" src="../Images/Icons/cross.png" style="height 10px; width:10px; position: absolute; right: 10px; top: 12px;"></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td id="misc_opt" style="position: relative;">
+                  <button class="upload_new_btn" (click)="file.click()">
+                    <img src="../Images/Icons/photo.png" style="height: 30px; width: 30px; position: relative; top:-1px">
+                    <span style="padding-left: 2px; position: relative; top: -11px;">Choose new Image</span>
+                  </button>
+                  <button class="revert_btn" (click)="revert_img()">
+                    <img src="../Images/Icons/undo.png" style="height: 22px; width: 22px; padding-left: 5px; position: relative; top: 2px;">
+                    <span style="padding-left: 5px; position: relative; top: -3px;">Revert to Original</span>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td rowspawn ="2" id = "image" style="vertical-align: center;"><img @transform="state" @opacity="opacity" id="active_img" style="max-height: 250px; max-width: 350px;"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="slideshow_row">
+      <span style="position: relative; color: #ffffff; font-family: helvetica neue; font-size: 1.1em; top: 30px; Left: 18px;">Uploaded Images</span>
+      <div style="height: 130px; width: 95.5%; margin-top: 5.5%; margin-left: 2.5%; overflow-y: hidden; white-space: nowrap; border-top: 2px solid #ffffff; padding-left: 5px; padding-right: 5px; position: relative;">
+        <div *ngFor="let images of prev_images_src; let i = index" style="display: inline-block; overflow: hidden; padding: 10px;">
+          <img [id]="i" (click)="change_image(i)" [src] = "images" style="height: 110px; box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="actionspace">
+    <span id="action_title">Action List</span>
+    <div style="height:100%; width:100%; position:relative;">
+      <table id="actions">
+        <tr class="action_row">
+          <td class="action_cell"><div @pop="rot_pop" (click)="toggle_rot()"><img src = "../Images/Icons/rotate.png" class="action_icons"><p class="action_name">Rotate</p></div></td>
+          <td class="action_cell"><div @pop="trans_pop" (click)="toggle_trans()"><img src = "../Images/Icons/translate.png" class="action_icons" style="height: 90px; width: 170px;"><p class="action_name">Translate</p></div></td>
+        </tr>
+        <tr class="action_row">
+          <td class="action_cell"><div @pop="scale_pop" (click)="toggle_scale()"><img src = "../Images/Icons/scale.png" class="action_icons"><p class="action_name">Scale</p></div></td>
+          <td class="action_cell"><div @pop="opc_pop" (click)="toggle_opc()"><img src = "../Images/Icons/opacity.png" class="action_icons"><p class="action_name">Opacity</p></div></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
